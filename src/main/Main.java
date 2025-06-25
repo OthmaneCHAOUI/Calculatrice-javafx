@@ -56,7 +56,7 @@ public class Main extends Application{
         // titre fenetre
         myStage.setTitle("Calculatrice");
         // definition Scene
-        Scene myScene = new Scene(grid, 300, 400);
+        Scene myScene = new Scene(grid);
         // css style
         myScene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         // mettre scene dans stage
@@ -66,9 +66,6 @@ public class Main extends Application{
     }
 
     public void hundlerButtonClick(String s){
-        if (s.equals("theme")){
-
-        }
         if(s.equals("=")){
             num_after_op = display_output.substring(num_before_op.length() + 1, display_output.length());
             inputs.add(num_after_op);
